@@ -1,3 +1,3 @@
-import AICenterPanel from "./AICenterPanel";
+import AICenterPanel from "./AiCenterPanel";
 
 export default AICenterPanel;
