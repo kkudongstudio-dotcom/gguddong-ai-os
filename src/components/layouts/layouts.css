@@ -1,0 +1,30 @@
+.dashboard-layout {
+  display: grid;
+  gap: 18px;
+}
+
+.dashboard-layout-header,
+.dashboard-layout-footer {
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+.dashboard-layout-main {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 18px;
+}
+
+.dashboard-layout-left,
+.dashboard-layout-right {
+  display: grid;
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .dashboard-layout-main {
+    grid-template-columns: 1fr;
+  }
+}

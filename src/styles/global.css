@@ -1,0 +1,197 @@
+@import "./tokens/colors.css";
+@import "./tokens/radius.css";
+@import "./tokens/spacing.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f4eadb;
+  color: #10233f;
+}
+.monitor-layout {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 18px;
+}
+
+.monitor-main,
+.monitor-side {
+  display: grid;
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .monitor-layout {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===========================
+   Operations Panel
+=========================== */
+
+.operations-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.operations-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.operations-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.operations-left,
+.operations-right {
+  display: grid;
+  gap: 16px;
+}
+
+.today-work-board,
+.work-order-list,
+.work-order-input,
+.workflow-steps {
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+.today-work-board h3,
+.work-order-list h3,
+.work-order-input h3 {
+  margin: 0 0 14px;
+  font-size: 18px;
+}
+
+.today-work-empty {
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.07);
+  color: rgba(255,255,255,.65);
+}
+
+.work-order-items {
+  display: grid;
+  gap: 10px;
+}
+
+.work-order-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.work-order-item span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  opacity: .55;
+}
+
+.work-order-item strong {
+  font-size: 15px;
+}
+
+.work-order-item p {
+  margin: 0 0 6px;
+  font-weight: 800;
+}
+
+.work-order-item small {
+  opacity: .65;
+}
+
+.work-order-input p {
+  margin: 0 0 12px;
+  color: rgba(255,255,255,.65);
+}
+
+.work-order-input textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 180px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.18);
+  color: inherit;
+  outline: none;
+}
+
+.work-order-input button {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 14px;
+  background: rgba(62,207,142,.85);
+  color: #071225;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.workflow-steps {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.workflow-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.workflow-step span {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(62,207,142,.85);
+  color: #071225;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.workflow-step strong {
+  font-size: 13px;
+}
+
+@media (max-width: 1000px) {
+  .operations-summary,
+  .operations-main {
+    grid-template-columns: 1fr;
+  }
+}
+.work-order-left,
+.work-order-right {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.work-order-left small,
+.work-order-right small {
+  font-size: 11px;
+  opacity: .6;
+}

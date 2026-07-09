@@ -1,0 +1,157 @@
+.division-status-card {
+  position: relative;
+  padding: 22px;
+  border-radius: 18px;
+  overflow: hidden;
+
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  border-left: 4px solid rgba(255,255,255,.25);
+
+  backdrop-filter: blur(18px);
+  transition: .25s;
+}
+
+.division-status-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,.2);
+}
+
+.division-green {
+  border-left-color: #34d399;
+}
+
+.division-yellow {
+  border-left-color: #facc15;
+}
+
+.division-red {
+  border-left-color: #fb7185;
+}
+
+.division-gray {
+  border-left-color: rgba(255,255,255,.35);
+}
+
+.division-status-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.division-code {
+  display: block;
+  margin-bottom: 6px;
+
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,.45);
+}
+
+.division-status-head h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.division-state {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.division-state-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.division-green .division-state {
+  color: #34d399;
+}
+
+.division-yellow .division-state {
+  color: #facc15;
+}
+
+.division-red .division-state {
+  color: #fb7185;
+}
+
+.division-gray .division-state {
+  color: rgba(255,255,255,.65);
+}
+
+.division-progress {
+  margin-bottom: 18px;
+}
+
+.division-progress-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+
+  font-size: 13px;
+}
+
+.division-progress-bar {
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255,255,255,.1);
+}
+
+.division-progress-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: currentColor;
+}
+
+.division-green .division-progress-bar span {
+  color: #34d399;
+}
+
+.division-yellow .division-progress-bar span {
+  color: #facc15;
+}
+
+.division-red .division-progress-bar span {
+  color: #fb7185;
+}
+
+.division-gray .division-progress-bar span {
+  color: rgba(255,255,255,.5);
+}
+
+.division-info-list {
+  display: grid;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.division-info-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.division-info-list span {
+  font-size: 12px;
+  color: rgba(255,255,255,.45);
+}
+
+.division-info-list p {
+  margin: 0;
+  max-width: 60%;
+  text-align: right;
+
+  font-size: 13px;
+  font-weight: 700;
+}

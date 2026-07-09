@@ -1,0 +1,68 @@
+const divisionData = [
+  {
+    code: "LOTTO",
+    name: "LOTTO WORKSHOP",
+    status: "ONLINE",
+    statusType: "green",
+    progress: 82,
+    lastRun: "2026-07-02 18:42",
+    lastWork: "후보풀 생성 완료",
+    lastError: "없음",
+    monitor: {
+      ai: "ONLINE",
+      engine: "RUNNING",
+      scheduler: "READY",
+      report: "NORMAL",
+    },
+  },
+  {
+    code: "INVEST",
+    name: "INVEST DIVISION",
+    status: "READY",
+    statusType: "yellow",
+    progress: 35,
+    lastRun: "-",
+    lastWork: "준비 중",
+    lastError: "없음",
+    monitor: {
+      ai: "READY",
+      engine: "WAIT",
+      scheduler: "WAIT",
+      report: "READY",
+    },
+  },
+  {
+    code: "LOGISTICS",
+    name: "LOGISTICS",
+    status: "PREPARING",
+    statusType: "gray",
+    progress: 10,
+    lastRun: "-",
+    lastWork: "-",
+    lastError: "-",
+    monitor: {
+      ai: "PREPARING",
+      engine: "OFF",
+      scheduler: "OFF",
+      report: "OFF",
+    },
+  },
+  {
+    code: "GAME",
+    name: "GAME STUDIO",
+    status: "PREPARING",
+    statusType: "gray",
+    progress: 5,
+    lastRun: "-",
+    lastWork: "-",
+    lastError: "-",
+    monitor: {
+      ai: "PREPARING",
+      engine: "OFF",
+      scheduler: "OFF",
+      report: "OFF",
+    },
+  },
+];
+
+export default divisionData;

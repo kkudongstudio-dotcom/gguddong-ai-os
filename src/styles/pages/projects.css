@@ -1,0 +1,342 @@
+.project-document-center {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  color: #071b3a;
+}
+
+.project-document-header p {
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+.project-document-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 18px;
+}
+
+.project-list-panel,
+.project-status-panel,
+.document-list-panel,
+.document-detail-panel {
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 22px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.project-list-panel,
+.project-status-panel,
+.document-list-panel,
+.document-detail-panel {
+  padding: 16px;
+}
+
+.project-list-title,
+.document-list-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.project-list-title span,
+.document-list-title span,
+.project-status-label {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  opacity: 0.72;
+}
+
+.project-list,
+.document-list {
+  display: grid;
+  gap: 10px;
+}
+
+.project-list-item,
+.document-list-item {
+  width: 100%;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.18);
+  color: inherit;
+  cursor: pointer;
+  padding: 13px 14px;
+}
+
+.project-list-item span,
+.document-list-item span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+
+.project-list-item strong,
+.document-list-item strong {
+  display: block;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.project-list-item small,
+.document-list-item small {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  opacity: 0.62;
+}
+
+.project-list-item.is-active,
+.document-list-item.is-active {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: rgba(7, 27, 58, 0.24);
+  box-shadow: inset 4px 0 0 rgba(34, 197, 94, 0.9);
+}
+
+.project-status-top,
+.document-detail-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.project-status-top h3 {
+  margin: 8px 0 8px;
+  font-size: 28px;
+}
+
+.project-status-top p {
+  margin: 0;
+  line-height: 1.55;
+  opacity: 0.78;
+}
+
+.project-progress-box {
+  min-width: 132px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(7, 27, 58, 0.1);
+  text-align: right;
+}
+
+.project-progress-box strong {
+  display: block;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.project-progress-box span {
+  display: block;
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.project-progress-bar {
+  height: 10px;
+  margin: 18px 0;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(7, 27, 58, 0.12);
+}
+
+.project-progress-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: rgba(34, 197, 94, 0.82);
+}
+
+.project-status-grid,
+.document-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.project-status-item {
+  padding: 13px 14px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.project-status-item span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 11px;
+  font-weight: 900;
+  opacity: 0.58;
+}
+
+.project-status-item strong {
+  display: block;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.document-workspace {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.document-create-button {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  border: 1px solid rgba(7, 27, 58, 0.18);
+  border-radius: 15px;
+  background: rgba(7, 27, 58, 0.12);
+  color: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.document-form {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.document-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.document-form label {
+  display: grid;
+  gap: 6px;
+}
+
+.document-form label span,
+.document-body-box span {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  opacity: 0.62;
+}
+
+.document-form input,
+.document-form select,
+.document-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(7, 27, 58, 0.16);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.34);
+  color: inherit;
+  font: inherit;
+}
+
+.document-form input,
+.document-form select {
+  min-height: 38px;
+  padding: 0 10px;
+}
+
+.document-form textarea {
+  min-height: 88px;
+  padding: 10px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.document-form button {
+  min-height: 40px;
+  border: 0;
+  border-radius: 13px;
+  background: rgba(34, 197, 94, 0.82);
+  color: #071b3a;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.document-detail-top span,
+.document-detail-top strong {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(7, 27, 58, 0.1);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.document-detail-panel h4 {
+  margin: 16px 0;
+  font-size: 22px;
+}
+
+.document-summary {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  line-height: 1.65;
+}
+
+.document-body-box {
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.document-body-box p {
+  margin: 8px 0 0;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.document-empty {
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.detail-empty {
+  min-height: 240px;
+}
+
+@media (max-width: 1100px) {
+  .project-document-layout,
+  .document-workspace,
+  .project-status-grid,
+  .document-meta-grid,
+  .document-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .project-status-top {
+    flex-direction: column;
+  }
+
+  .project-progress-box {
+    width: 100%;
+    text-align: left;
+  }
+}

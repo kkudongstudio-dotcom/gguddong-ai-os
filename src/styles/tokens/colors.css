@@ -1,0 +1,24 @@
+:root {
+
+  /* Brand */
+  --color-primary: #3ecf8e;
+  --color-secondary: #62e3ff;
+
+  /* Status */
+  --color-online: #2ecc71;
+  --color-ready: #f1c40f;
+  --color-error: #ff5b5b;
+  --color-offline: #8f9ba8;
+
+  /* Background */
+  --bg-panel: rgba(255,255,255,.08);
+  --bg-panel-hover: rgba(255,255,255,.12);
+
+  /* Border */
+  --border-light: rgba(255,255,255,.10);
+  --border-strong: rgba(255,255,255,.18);
+
+  /* Text */
+  --text-main: #ffffff;
+  --text-sub: rgba(255,255,255,.60);
+}
