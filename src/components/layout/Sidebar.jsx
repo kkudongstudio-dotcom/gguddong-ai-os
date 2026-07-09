@@ -5,8 +5,8 @@ function Sidebar({ onOpenPanel }) {
         <div className="sidebar-logo">GG</div>
 
         <div>
-          <strong>GGUDDONG HQ</strong>
-          <span>ERP</span>
+          <strong>GGUDDONG AI OS</strong>
+          <span>HQ</span>
         </div>
       </div>
 
@@ -22,17 +22,25 @@ function Sidebar({ onOpenPanel }) {
         <button
           type="button"
           className="sidebar-menu-item"
-          onClick={() => onOpenPanel("작업관리")}
+          onClick={() => onOpenPanel("오늘 작업")}
         >
-          작업관리
+          오늘 작업
         </button>
 
         <button
           type="button"
           className="sidebar-menu-item"
-          onClick={() => onOpenPanel("프로젝트")}
+          onClick={() => onOpenPanel("Project Center")}
         >
           프로젝트
+        </button>
+
+        <button
+          type="button"
+          className="sidebar-menu-item"
+          onClick={() => onOpenPanel("프로젝트 문서")}
+        >
+          프로젝트 문서
         </button>
 
         <button
@@ -62,7 +70,7 @@ function Sidebar({ onOpenPanel }) {
 
       <div className="sidebar-footer">
         <span>HQ MODE</span>
-        <strong>READ ONLY</strong>
+        <strong>AI OS</strong>
       </div>
     </aside>
   );
