@@ -1,7 +1,6 @@
 import DashboardPanel from "../../dashboard";
 import OperationsPanel from "../../operations";
-import ProjectsPanel from "../../projects";
-import ProjectCenterPanel from "../../project-center";
+import DocumentManagementPanel from "../../document-management";
 import AiCenterPanel from "../../ai-center";
 import BusinessPanel from "../../business";
 import MonitorPanel from "../../monitor";
@@ -9,8 +8,7 @@ import MonitorPanel from "../../monitor";
 const panelMap = {
   Dashboard: DashboardPanel,
   "오늘 작업": OperationsPanel,
-  프로젝트: ProjectsPanel,
-  "Project Center": ProjectCenterPanel,
+  문서관리: DocumentManagementPanel,
   "AI 센터": AiCenterPanel,
   사업부: BusinessPanel,
   관제센터: MonitorPanel,
@@ -20,7 +18,8 @@ function FloatingPanel({ title, onClose }) {
   const ActivePanel = panelMap[title];
 
   const isWidePanel =
-    title === "Project Center";
+    title === "Dashboard" ||
+    title === "문서관리";
 
   return (
     <div className="panel-overlay" onClick={onClose}>
@@ -28,12 +27,13 @@ function FloatingPanel({ title, onClose }) {
         className={`floating-panel ${
           isWidePanel ? "floating-panel-wide" : ""
         }`}
-        onClick={(e) => e.stopPropagation()}
+        onClick={(event) => event.stopPropagation()}
       >
         <button
           type="button"
           className="panel-close"
           onClick={onClose}
+          aria-label="패널 닫기"
         >
           ×
         </button>

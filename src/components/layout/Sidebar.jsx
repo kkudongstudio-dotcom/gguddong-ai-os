@@ -12,12 +12,12 @@ function Sidebar({ onOpenPanel }) {
 
       <nav className="sidebar-menu">
         <button
-          type="button"
-          className="sidebar-menu-item active"
-          onClick={() => onOpenPanel("Dashboard")}
-        >
-          Dashboard
-        </button>
+  type="button"
+  className="sidebar-menu-item active"
+  onClick={() => onOpenPanel("Dashboard")}
+>
+  Dashboard
+</button>
 
         <button
           type="button"
@@ -25,22 +25,6 @@ function Sidebar({ onOpenPanel }) {
           onClick={() => onOpenPanel("오늘 작업")}
         >
           오늘 작업
-        </button>
-
-        <button
-          type="button"
-          className="sidebar-menu-item"
-          onClick={() => onOpenPanel("Project Center")}
-        >
-          프로젝트
-        </button>
-
-        <button
-          type="button"
-          className="sidebar-menu-item"
-          onClick={() => onOpenPanel("프로젝트 문서")}
-        >
-          프로젝트 문서
         </button>
 
         <button
@@ -67,6 +51,18 @@ function Sidebar({ onOpenPanel }) {
           관제센터
         </button>
       </nav>
+
+      <div className="sidebar-bottom-menu">
+        <div className="sidebar-menu-divider" />
+
+        <button
+          type="button"
+          className="sidebar-menu-item"
+          onClick={() => onOpenPanel("문서관리")}
+        >
+          문서관리
+        </button>
+      </div>
 
       <div className="sidebar-footer">
         <span>HQ MODE</span>

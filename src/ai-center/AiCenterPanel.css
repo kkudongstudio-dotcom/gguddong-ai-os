@@ -1,0 +1,187 @@
+/* ======================================================
+   GGUDDONG AI OS
+   AI Center
+====================================================== */
+
+.ai-center-panel {
+  width: 100%;
+  min-height: 100%;
+  color: #071a3d;
+}
+
+/* ======================================================
+   Summary
+====================================================== */
+
+.ai-center-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.ai-center-summary-item {
+  min-height: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+}
+
+.ai-center-summary-item span {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(7, 26, 61, 0.58);
+}
+
+.ai-center-summary-item strong {
+  font-size: 21px;
+  font-weight: 850;
+  color: #071a3d;
+}
+
+/* ======================================================
+   Section
+====================================================== */
+
+.ai-center-section {
+  margin-bottom: 24px;
+}
+
+.ai-center-section:last-child {
+  margin-bottom: 0;
+}
+
+.ai-center-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+
+.ai-center-section-header div > span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #7892e8;
+}
+
+.ai-center-section-header h3 {
+  margin: 0;
+  font-size: 19px;
+  color: #071a3d;
+}
+
+.ai-center-section-header > strong {
+  font-size: 12px;
+  color: rgba(7, 26, 61, 0.58);
+}
+
+/* ======================================================
+   AI Cards
+====================================================== */
+
+.ai-center-card-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* ======================================================
+   AI Logs
+====================================================== */
+
+.ai-center-log-section {
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+}
+
+.ai-log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ai-log-item {
+  display: grid;
+  grid-template-columns: 54px 150px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.ai-log-item time {
+  font-size: 11px;
+  font-weight: 800;
+  color: rgba(7, 26, 61, 0.54);
+}
+
+.ai-log-item > strong {
+  font-size: 12px;
+  color: #071a3d;
+}
+
+.ai-log-item p {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(7, 26, 61, 0.74);
+}
+
+.ai-log-status {
+  min-width: 44px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(130, 140, 160, 0.14);
+  color: #526078;
+  font-size: 10px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.ai-log-status.complete {
+  background: rgba(44, 185, 100, 0.14);
+  color: #16723f;
+}
+
+.ai-log-status.waiting {
+  background: rgba(220, 180, 20, 0.16);
+  color: #806706;
+}
+
+/* ======================================================
+   Responsive
+====================================================== */
+
+@media (max-width: 1150px) {
+  .ai-center-summary,
+  .ai-center-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .ai-center-summary,
+  .ai-center-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-log-item {
+    grid-template-columns: 48px minmax(0, 1fr) auto;
+  }
+
+  .ai-log-item p {
+    grid-column: 2 / 4;
+  }
+}

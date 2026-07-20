@@ -2,8 +2,8 @@ import { useState } from "react";
 
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import RightSidebar from "./RightSidebar";
 import FloatingPanel from "./FloatingPanel";
-import Dashboard from "../../pages/Dashboard";
 
 function MainLayout() {
   const [activePanel, setActivePanel] = useState(null);
@@ -15,10 +15,10 @@ function MainLayout() {
       <div className="erp-main">
         <Header />
 
-        <main className="erp-content">
-          <Dashboard />
-        </main>
+        <main className="erp-content" />
       </div>
+
+      <RightSidebar />
 
       {activePanel && (
         <FloatingPanel

@@ -1,157 +1,182 @@
+/* ======================================================
+   GGUDDONG AI OS
+   Division Status Card
+====================================================== */
+
 .division-status-card {
-  position: relative;
+  width: 100%;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 22px;
-  border-radius: 18px;
-  overflow: hidden;
-
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.12);
-  border-left: 4px solid rgba(255,255,255,.25);
-
-  backdrop-filter: blur(18px);
-  transition: .25s;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.18);
+  color: #071a3d;
+  text-align: left;
+  cursor: pointer;
+  backdrop-filter: blur(14px);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .division-status-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(255,255,255,.2);
-}
-
-.division-green {
-  border-left-color: #34d399;
-}
-
-.division-yellow {
-  border-left-color: #facc15;
-}
-
-.division-red {
-  border-left-color: #fb7185;
-}
-
-.division-gray {
-  border-left-color: rgba(255,255,255,.35);
+  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(255, 255, 255, 0.42);
 }
 
 .division-status-head {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
+  justify-content: space-between;
   gap: 16px;
-  margin-bottom: 18px;
+}
+
+.division-status-head h3 {
+  margin: 6px 0 0;
+  font-size: 20px;
+  line-height: 1.35;
+  color: #071a3d;
 }
 
 .division-code {
   display: block;
-  margin-bottom: 6px;
-
   font-size: 11px;
-  letter-spacing: 2px;
-  color: rgba(255,255,255,.45);
-}
-
-.division-status-head h3 {
-  margin: 0;
-  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: rgba(7, 26, 61, 0.58);
 }
 
 .division-state {
   display: flex;
   align-items: center;
   gap: 7px;
+  flex-shrink: 0;
+}
 
+.division-state strong {
   font-size: 12px;
-  font-weight: 800;
+  color: #071a3d;
 }
 
 .division-state-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: currentColor;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #aeb7c6;
 }
 
-.division-green .division-state {
-  color: #34d399;
+.division-green .division-state-dot {
+  background: #32c56b;
 }
 
-.division-yellow .division-state {
-  color: #facc15;
+.division-yellow .division-state-dot {
+  background: #d9b719;
 }
 
-.division-red .division-state {
-  color: #fb7185;
+.division-gray .division-state-dot {
+  background: #aeb7c6;
 }
 
-.division-gray .division-state {
-  color: rgba(255,255,255,.65);
-}
+/* ======================================================
+   Progress
+====================================================== */
 
 .division-progress {
-  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
 }
 
 .division-progress-top {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin-bottom: 8px;
+}
 
-  font-size: 13px;
+.division-progress-top span {
+  font-size: 12px;
+  color: rgba(7, 26, 61, 0.62);
+}
+
+.division-progress-top b {
+  font-size: 14px;
+  color: #071a3d;
 }
 
 .division-progress-bar {
+  width: 100%;
   height: 8px;
-  border-radius: 999px;
   overflow: hidden;
-  background: rgba(255,255,255,.1);
+  border-radius: 999px;
+  background: rgba(7, 26, 61, 0.1);
 }
 
 .division-progress-bar span {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: currentColor;
+  background: #4b7cff;
 }
 
 .division-green .division-progress-bar span {
-  color: #34d399;
+  background: #32c56b;
 }
 
 .division-yellow .division-progress-bar span {
-  color: #facc15;
-}
-
-.division-red .division-progress-bar span {
-  color: #fb7185;
+  background: #d9b719;
 }
 
 .division-gray .division-progress-bar span {
-  color: rgba(255,255,255,.5);
+  background: #9ba6b7;
 }
+
+/* ======================================================
+   Information
+====================================================== */
 
 .division-info-list {
   display: grid;
   gap: 10px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255,255,255,.1);
+  margin-top: auto;
 }
 
 .division-info-list div {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.16);
 }
 
 .division-info-list span {
-  font-size: 12px;
-  color: rgba(255,255,255,.45);
+  display: block;
+  margin-bottom: 5px;
+  font-size: 11px;
+  color: rgba(7, 26, 61, 0.56);
 }
 
 .division-info-list p {
   margin: 0;
-  max-width: 60%;
-  text-align: right;
-
+  overflow-wrap: anywhere;
   font-size: 13px;
   font-weight: 700;
+  line-height: 1.45;
+  color: #071a3d;
+}
+
+/* ======================================================
+   Responsive
+====================================================== */
+
+@media (max-width: 760px) {
+  .division-status-card {
+    min-height: auto;
+  }
+
+  .division-status-head {
+    flex-direction: column;
+  }
 }

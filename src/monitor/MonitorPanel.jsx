@@ -1,80 +1,66 @@
-import "../components/widgets/widgets.css";
-import "../components/layouts/layouts.css";
+import "./monitor.css";
 
-import {
-  InfoWidget,
-  ProgressWidget,
-  StatusWidget,
-} from "../components/widgets";
-
-import { DashboardLayout } from "../components/layouts";
+const monitorItems = [
+  {
+    id: "api",
+    label: "API",
+    status: "NORMAL",
+    description: "Web API 연결 상태",
+  },
+  {
+    id: "worker",
+    label: "Cloudflare Workers",
+    status: "ONLINE",
+    description: "Workers URL 운영 상태",
+  },
+  {
+    id: "scheduler",
+    label: "Scheduler",
+    status: "READY",
+    description: "자동 실행 준비 상태",
+  },
+  {
+    id: "gas",
+    label: "Google Apps Script",
+    status: "ONLINE",
+    description: "GAS 백엔드 연결 상태",
+  },
+  {
+    id: "log",
+    label: "System Log",
+    status: "NORMAL",
+    description: "최근 오류 없음",
+  },
+  {
+    id: "document",
+    label: "Document Store",
+    status: "READY",
+    description: "문서관리 저장소 준비 상태",
+  },
+];
 
 function MonitorPanel() {
   return (
-    <DashboardLayout
-      header={
-        <div className="panel-header-block">
-          <span className="panel-kicker">HQ MONITOR</span>
+    <section className="monitor-panel">
+      <header className="monitor-panel-header">
+        <p className="panel-eyebrow">MONITOR CENTER</p>
+        <h2>관제센터</h2>
+        <p>AI OS의 API, 실행 모듈, 자동화 시스템 상태를 확인합니다.</p>
+      </header>
 
-          <h2>운영 관제센터</h2>
+      <div className="monitor-grid">
+        {monitorItems.map((item) => (
+          <article key={item.id} className="monitor-card">
+            <div className="monitor-card-header">
+              <h3>{item.label}</h3>
+              <span className="monitor-status">{item.status}</span>
+            </div>
 
-          <p>
-            GGUDDONG HQ의 전체 운영 상태와 사업부 흐름을 확인합니다.
-          </p>
-        </div>
-      }
-      left={
-        <>
-          <StatusWidget
-            label="HQ 상태"
-            value="ONLINE"
-            type="green"
-          />
-
-          <ProgressWidget
-            label="전체 운영률"
-            value={82}
-          />
-
-          <InfoWidget
-            label="최근 이벤트"
-            value="LOTTO 후보풀 생성 완료"
-          />
-
-          <InfoWidget
-            label="주의 상태"
-            value="0건"
-          />
-        </>
-      }
-      right={
-        <>
-          <StatusWidget
-            label="LOTTO WORKSHOP"
-            value="ONLINE"
-            type="green"
-          />
-
-          <StatusWidget
-            label="INVEST DIVISION"
-            value="READY"
-            type="yellow"
-          />
-
-          <StatusWidget
-            label="LOGISTICS"
-            value="PREPARING"
-            type="gray"
-          />
-
-          <StatusWidget
-            label="GAME STUDIO"
-            value="PREPARING"
-            type="gray"
-          />
-        </>
-      }
-    />
+            <p>{item.description}</p>
+          </article>
+        ))}
+      </div>
+    </section>
   );
 }
 
