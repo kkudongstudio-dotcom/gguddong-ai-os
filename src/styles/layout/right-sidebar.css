@@ -22,7 +22,6 @@
   color: #071b3a;
 
   backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
 
   transition:
     width 0.24s ease,

@@ -21,7 +21,6 @@
   background: rgba(8, 18, 34, 0.3);
 
   backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
 }
 
 /* ======================================================
